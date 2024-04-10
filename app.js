@@ -32,10 +32,14 @@ const syncDatabase = async () => {
 
 /* SET UP EXPRESS APPLICATION */
 // Import Express application
+const cors = require('cors');
 const express = require("express");
 // Create an Express application called "app"
 const app = express();
-
+app.use(cors({
+  origin: 'http://localhost:3000', 
+  credentials: true 
+}));
 /* SET UP ROUTES */
 // Import sub-routes and associated router functions for students and campuses
 const apiRouter = require('./routes/index');
