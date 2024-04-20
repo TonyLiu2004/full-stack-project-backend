@@ -36,10 +36,14 @@ const seedDB = async () => {
 		firstname: "Mary",
       lastname: "Johnson",
 	});
-
+	const dummy_student3 = await Student.create({
+		firstname: "John",
+      lastname: "Cena",
+	});
 	// Add students to campuses
 	await dummy_student.setCampus(dummy_campus);
 	await dummy_student2.setCampus(dummy_campus2);
+	await dummy_student3.setCampus(dummy_campus3);
 }
 
 // Export the database seeding function
