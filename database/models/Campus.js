@@ -9,22 +9,22 @@ const db = require('../db');  // Import Sequelize database instance called "db"
 // Define the campus model
 const Campus = db.define("campus", {
   name: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false //does not allow null for this field
   },
-  
+
   imageurl: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: true
   },
 
   address: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false
   },
 
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   }
 });
 
