@@ -15,7 +15,8 @@ const Campus = db.define("campus", {
 
   imageurl: {
     type: Sequelize.TEXT,
-    allowNull: true
+    allowNull: true,
+    defaultValue:'https://cdn-icons-png.flaticon.com/512/904/904861.png'
   },
 
   address: {
@@ -24,7 +25,8 @@ const Campus = db.define("campus", {
   },
 
   description: {
-    type: Sequelize.TEXT,
+    type: Sequelize.TEXT('long'),
+    allowNull: true
   }
 });
 
